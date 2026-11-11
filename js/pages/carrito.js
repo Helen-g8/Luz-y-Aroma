@@ -101,21 +101,14 @@ function pintar() {
   const carrito = obtenerCarrito();
 
   if (carrito.length === 0) {
+    lista.parentElement.className = "col-12";
     columnaResumen.classList.add("d-none");
-
     mostrarVacio(
-      lista,
-      "Tu carrito está vacío.",
-      "bi-bag",
-      {
-        texto: "Ver catálogo",
-        href: ruta("index.html")
-      }
-    );
-
+      lista, "Tu carrito está vacío.", "bi-bag", { texto: "Ver catálogo", href: ruta("index.html") });
     return;
   }
 
+  lista.parentElement.className = "col-lg-7"; // ← nueva: vuelve a las 2 columnas
   columnaResumen.classList.remove("d-none");
   lista.innerHTML = carrito.map(itemHTML).join("");
   pintarResumen(carrito);
