@@ -1,0 +1,78 @@
+
+/* ==========================================================
+   Carrito, pedidos y panel de indicadores
+   ========================================================== */
+
+/* ---------- Carrito ---------- */
+.carrito-item h2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+}
+
+.cantidad-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cantidad-control .btn {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.cantidad-control span {
+  min-width: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  .resumen-pedido {
+    position: sticky;
+    top: 1rem;
+  }
+}
+
+/* ---------- Mis pedidos ---------- */
+.accordion-button:not(.collapsed) {
+  background-color: var(--crema-oscuro);
+  color: var(--cafe);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(200, 134, 58, 0.35);
+}
+
+/* ---------- Panel de indicadores ---------- */
+.indicador {
+  height: 100%;
+  padding: 1.25rem;
+}
+
+.indicador .bi {
+  font-size: 1.6rem;
+  color: var(--ambar);
+}
+
+.indicador .valor {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cafe);
+  line-height: 1.2;
+}
+
+.indicador .etiqueta {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.barra-estado .progress {
+  height: 0.6rem;
+}
+
+.lista-panel li + li {
+  border-top: 1px solid var(--borde);
+}
