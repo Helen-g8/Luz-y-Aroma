@@ -1,0 +1,164 @@
+:root {
+  /* Paleta de la marca */
+  --durazno: #eb9b68;
+  --amarillo: #ffdc80;
+  --vainilla: #feecbc;
+  --terracota: #c35c2f;
+  --rosado: #fcf2f0;
+
+  /* Tonos para que el texto se lea bien*/
+  --terracota-oscuro: #a84c24;   /* botones y enlaces: texto blanco encima se lee bien */
+  --cafe: #4a2c1f;               /* textos fuertes, títulos y barra de navegación */
+  --texto: #3d2419;
+  --texto-suave: #7a5646;
+  --borde: #f3d9c6;
+
+  /* Nombres que usan los demás CSS (catalogo.css y pedidos.css) */
+  --crema: var(--rosado);
+  --crema-oscuro: var(--vainilla);
+  --ambar: var(--terracota-oscuro);
+  --ambar-oscuro: #8f3f1d;
+}
+
+body {
+  background-color: var(--crema);
+  color: var(--texto);
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--cafe);
+}
+
+a {
+  color: var(--ambar-oscuro);
+}
+
+:focus-visible {
+  outline: 3px solid var(--ambar);
+  outline-offset: 2px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-luz {
+  background-color: var(--cafe);
+}
+
+.navbar-luz .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--crema);
+  font-weight: 700;
+}
+
+.logo-nav {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-luz .nav-link {
+  color: var(--crema);
+}
+
+.navbar-luz .nav-link:hover,
+.navbar-luz .nav-link.active {
+  color: var(--amarillo);
+}
+
+.navbar-luz .navbar-text {
+  color: var(--crema-oscuro);
+}
+
+/* ---------- Botones de la marca ---------- */
+.btn-ambar {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--ambar);
+  --bs-btn-border-color: var(--ambar);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--ambar-oscuro);
+  --bs-btn-hover-border-color: var(--ambar-oscuro);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--ambar-oscuro);
+  --bs-btn-active-border-color: var(--ambar-oscuro);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--ambar);
+  --bs-btn-disabled-border-color: var(--ambar);
+}
+
+.btn-outline-ambar {
+  --bs-btn-color: var(--ambar-oscuro);
+  --bs-btn-border-color: var(--ambar);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--ambar);
+  --bs-btn-hover-border-color: var(--ambar);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--ambar-oscuro);
+  --bs-btn-active-border-color: var(--ambar-oscuro);
+}
+
+.text-ambar {
+  color: var(--ambar) !important;
+}
+
+/* ---------- Tarjetas y estados ---------- */
+.tarjeta {
+  background-color: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(91, 58, 41, 0.06);
+}
+
+.estado-centro {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--texto-suave);
+}
+
+.estado-centro > .bi {
+  font-size: 2.5rem;
+  color: var(--durazno);
+}
+
+/* ---------- Login y registro ---------- */
+.auth-contenedor {
+  max-width: 440px;
+  margin: 1.5rem auto;
+}
+
+/* ---------- Tablas ---------- */
+.table > :not(caption) > * > * {
+  background-color: transparent;
+}
+
+.table-responsive.tarjeta {
+  padding: 0.5rem;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: var(--cafe);
+  color: var(--crema-oscuro);
+  padding: 1.25rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 4px solid var(--durazno);
+}
+
+@media (max-width: 575.98px) {
+  h1,
+  .h3 {
+    font-size: 1.5rem;
+  }
+}
