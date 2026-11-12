@@ -34,7 +34,7 @@
 
 .vela-portada {
   position: relative;
-  height: 160px;
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
