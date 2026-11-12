@@ -1,29 +1,33 @@
-// Datos iniciales del catálogo. Se cargan desde admin/productos.html con el botón
-// "Cargar datos iniciales" (solo aparece cuando la colección está vacía).
+// Datos iniciales del catálogo, tomados del catálogo de Luz y Aroma.
+// Se cargan desde admin/productos.html con el botón "Cargar datos iniciales"
+// (solo aparece cuando la colección está vacía). Las fotos están en img/velas/.
+// El precio es el de cera de soya; el de parafina se menciona en la descripción.
 // Hay a propósito una vela agotada y varias con stock bajo para demostrar esas reglas.
+const IMG = "https://luz-y-aroma.web.app/img/velas/";
+
 export const VELAS_INICIALES = [
-  { nombre: "Lavanda Serena", aroma: "Lavanda", tamano: "mediana", precio: 9.5, stock: 20, activo: true, imagenUrl: "",
-    descripcion: "Vela relajante de lavanda, ideal para el dormitorio antes de dormir." },
-  { nombre: "Vainilla Cálida", aroma: "Vainilla", tamano: "grande", precio: 14, stock: 15, activo: true, imagenUrl: "",
-    descripcion: "Aroma dulce y envolvente de vainilla para llenar de calidez la sala." },
-  { nombre: "Canela y Manzana", aroma: "Canela", tamano: "mediana", precio: 10, stock: 12, activo: true, imagenUrl: "",
-    descripcion: "Mezcla especiada de canela con un toque de manzana horneada." },
-  { nombre: "Brisa Cítrica", aroma: "Cítricos", tamano: "pequena", precio: 6, stock: 30, activo: true, imagenUrl: "",
-    descripcion: "Naranja, limón y toronja para un ambiente fresco y lleno de energía." },
-  { nombre: "Eucalipto y Menta", aroma: "Eucalipto", tamano: "mediana", precio: 10.5, stock: 8, activo: true, imagenUrl: "",
-    descripcion: "Fresca y despejante, perfecta para el baño o el área de estudio." },
-  { nombre: "Rosa Mosqueta", aroma: "Rosa", tamano: "grande", precio: 15, stock: 4, activo: true, imagenUrl: "",
-    descripcion: "Aroma floral y elegante de rosa, ideal para regalar." },
-  { nombre: "Coco Tropical", aroma: "Coco", tamano: "pequena", precio: 6.5, stock: 25, activo: true, imagenUrl: "",
-    descripcion: "Coco cremoso que recuerda a un día de playa." },
-  { nombre: "Café de Altura", aroma: "Café", tamano: "mediana", precio: 11, stock: 10, activo: true, imagenUrl: "",
-    descripcion: "Inspirada en el café salvadoreño recién tostado." },
-  { nombre: "Sándalo Zen", aroma: "Sándalo", tamano: "grande", precio: 17.5, stock: 3, activo: true, imagenUrl: "",
-    descripcion: "Notas amaderadas y profundas para meditar o hacer yoga." },
-  { nombre: "Frutos del Bosque", aroma: "Frutos rojos", tamano: "mediana", precio: 10, stock: 0, activo: true, imagenUrl: "",
-    descripcion: "Fresa, mora y frambuesa en una vela dulce y frutal." },
-  { nombre: "Lavanda Mini", aroma: "Lavanda", tamano: "pequena", precio: 5.5, stock: 40, activo: true, imagenUrl: "",
-    descripcion: "Versión pequeña de nuestra vela más vendida, ideal para probar." },
-  { nombre: "Vainilla y Café", aroma: "Vainilla", tamano: "mediana", precio: 12, stock: 9, activo: true, imagenUrl: "",
-    descripcion: "La combinación perfecta para las mañanas: vainilla suave con café." }
+  { nombre: "Rosa grande", aroma: "Rosa", tamano: "grande", precio: 2.5, stock: 20, activo: true, imagenUrl: IMG + "rosa-grande.jpg",
+    descripcion: "Vela en forma de rosa abierta. Mide 4.5 cm de ancho y 4 cm de alto. También en parafina por $2.00." },
+  { nombre: "Rosa mediana", aroma: "Frutos rojos", tamano: "mediana", precio: 2, stock: 25, activo: true, imagenUrl: IMG + "rosa-mediana.jpg",
+    descripcion: "Rosa roja de pétalos marcados. Mide 4 cm de ancho y 3 cm de alto. También en parafina por $1.50." },
+  { nombre: "Rosa pequeña", aroma: "Vainilla", tamano: "pequena", precio: 1.5, stock: 30, activo: true, imagenUrl: IMG + "rosa-pequena.jpg",
+    descripcion: "Rosa blanca pequeña, ideal para detalles y recuerdos. Mide 3.5 cm de ancho y 2 cm de alto. También en parafina por $1.00." },
+  { nombre: "Girasol", aroma: "Cítricos", tamano: "mediana", precio: 3, stock: 15, activo: true, imagenUrl: IMG + "girasol.jpg",
+    descripcion: "Vela flotante en forma de girasol. Mide 5.5 cm de ancho y 2.3 cm de alto. También en parafina por $2.50." },
+  { nombre: "Tulipán", aroma: "Rosa", tamano: "pequena", precio: 2, stock: 18, activo: true, imagenUrl: IMG + "tulipan.jpg",
+    descripcion: "Tulipán de cera rosado, delicado y elegante. Mide 3.5 cm de ancho y 4.5 cm de alto. También en parafina por $1.50." },
+  { nombre: "Ramo de tulipanes", aroma: "Coco", tamano: "grande", precio: 4.5, stock: 8, activo: true, imagenUrl: IMG + "ramo-de-tulipanes.jpg",
+    descripcion: "Ramo de tulipanes blancos sobre base de tronco. Mide 5.5 cm de ancho y 10 cm de alto. También en parafina por $3.50." },
+  { nombre: "Margaritas", aroma: "Lavanda", tamano: "pequena", precio: 1.75, stock: 22, activo: true, imagenUrl: IMG + "margaritas.jpg",
+    descripcion: "Margarita amarilla flotante. Mide 5.5 cm de ancho y 1.5 cm de alto. También en parafina por $1.25." },
+  { nombre: "Peonías", aroma: "Frutos rojos", tamano: "mediana", precio: 3, stock: 12, activo: true, imagenUrl: IMG + "peonias.jpg",
+    descripcion: "Peonía roja de muchos pétalos. Mide 6 cm de ancho y 2.5 cm de alto. También en parafina por $2.50." },
+  { nombre: "Pino de niveles grande", aroma: "Sándalo", tamano: "grande", precio: 7, stock: 3, activo: true, imagenUrl: IMG + "pino-de-niveles-grande.jpg",
+    descripcion: "Pino verde de varios niveles, ideal para decorar en Navidad. Mide 7 cm de ancho y 11.5 cm de alto. También en parafina por $6.00." },
+  { nombre: "Huellas grandes", aroma: "Canela", tamano: "mediana", precio: 3, stock: 10, activo: true, imagenUrl: IMG + "huellas-grandes.jpg",
+    descripcion: "Vela en forma de huellita, perfecta para amantes de las mascotas. Mide 5.5 cm de ancho y 2.5 cm de alto. También en parafina por $2.50." },
+  { nombre: "Astronauta", aroma: "Eucalipto", tamano: "mediana", precio: 3.5, stock: 0, activo: true, imagenUrl: IMG + "astronauta.jpg",
+    descripcion: "Astronauta de cera sentado sobre la luna. Mide 4.5 cm de ancho y 8 cm de alto. También en parafina por $3.00." },
+  { nombre: "Pareja de novios", aroma: "Vainilla", tamano: "grande", precio: 4.5, stock: 4, activo: true, imagenUrl: IMG + "pareja-de-novios.jpg",
+    descripcion: "Pareja de novios abrazados, ideal para bodas y aniversarios. Mide 6 cm de ancho y 10 cm de alto. También en parafina por $3.50." }
 ];
