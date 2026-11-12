@@ -114,3 +114,12 @@ Firestore; `pages` y `ui` son lo único que toca el DOM. Una página nunca llama
 - **Administración (`admin/productos.html`):** CRUD completo con un mismo formulario para crear y editar, validaciones
   (`js/utils/validaciones.js`), confirmación antes de eliminar, opción de ocultar una vela sin borrarla y aviso de stock bajo.
 - **Datos iniciales:** 12 velas en `seed/datos-iniciales.js`, que se cargan con un botón cuando el catálogo está vacío.
+
+  
+## Carrito, pedidos e indicadores (Oscar)
+
+- **Carrito (`carrito.html`):** se guarda en `localStorage`. Reglas de negocio: la cantidad no puede pasar del stock, envío de $3.50 y **envío gratis desde $30**, teléfono salvadoreño de 8 dígitos.
+- **Pedido:** se crea con una **transacción** de Firestore que verifica y descuenta el stock y registra el pedido al mismo tiempo.
+- **Estados:** las transiciones permitidas están en `TRANSICIONES` (`js/services/pedidos.service.js`). Cancelar un pedido devuelve el stock.
+- **Panel (`admin/dashboard.html`):** ventas totales, pedidos válidos, ticket promedio, pedidos por estado, top 3 de velas y velas con stock bajo, calculados con `filter`, `reduce` y `sort` (`js/utils/indicadores.js`).
+
