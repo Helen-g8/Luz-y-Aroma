@@ -6,7 +6,7 @@ Desafío Práctico II · Desarrollo Web I · ESEN · 2026
 
 **Equipo:** Helen · Oscar · Sofi
 
-**Versión publicada:** https://PEGAR-PROYECTO.web.app
+**Versión publicada:** https://luz-y-aroma.web.app
 
 ---
 
